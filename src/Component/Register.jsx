@@ -19,6 +19,7 @@ export default function Register() {
     let myUser = { ...user }; ///deep copy
     myUser[e.target.name] = e.target.value;
     setUser(myUser);
+    console.log(user);
   }
   async function submitRegisterForm(e) {
     e.preventDefault();
@@ -29,7 +30,7 @@ export default function Register() {
       setisLoading(false);
     } else {
       let { data } = await axios.post(
-        "https://route-movies-api.vercel.app/signup",
+        "https://movies-api.routemisr.com//signup",
         user
       );
       if (data.message === "success") {
