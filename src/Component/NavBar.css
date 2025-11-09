@@ -1,0 +1,83 @@
+.navbar {
+  padding: 1rem 0;
+  background-color: rgba(19, 23, 34, 0.8) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.8rem !important;
+  font-weight: bold;
+  color: #24baef !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #fff !important;
+  transform: scale(1.05);
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  margin: 0 1rem;
+  padding: 0.5rem 1rem !important;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #24baef;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover {
+  color: #24baef !important;
+  background-color: rgba(36, 186, 239, 0.1);
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 80%;
+}
+
+.navbar-item i {
+  font-size: 1.2rem;
+  color: #fff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.navbar-item i:hover {
+  color: #24baef;
+  transform: translateY(-3px) scale(1.1);
+}
+
+.navbar-toggler {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.25rem rgba(36, 186, 239, 0.25);
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .navbar-nav .nav-link {
+    margin: 0.5rem 0;
+  }
+}
+

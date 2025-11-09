@@ -1,16 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './NavBar.css'
 
-
-
-
-export default function NavBar(props) {
+export default function NavBar() {
   return (
-    
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-transparent">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="home"> Noxe </Link>
+          <Link className="navbar-brand" to="home"> Trending </Link>
           
           <button
             className="navbar-toggler"type="button"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
@@ -19,9 +16,8 @@ export default function NavBar(props) {
            </button>
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              {props.userData?<>
-                <li className="nav-item">
+            <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li className="nav-item">
                 <Link className="nav-link" to="home">Home</Link>
               </li>
               <li className="nav-item">
@@ -30,11 +26,6 @@ export default function NavBar(props) {
               <li className="nav-item">
                 <Link className="nav-link" to="tv"> TV Show</Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="contacts"> Contacts</Link>
-              </li>
-              </>:''}
-         
             </ul > 
            <ul className="navbar-nav mb-2 mb-lg-0">
             <li className='navbar-item d-flex align-items-center'>
@@ -44,15 +35,6 @@ export default function NavBar(props) {
             <i className='fab mx-2 fa-soundcloud'> </i>
             <i className='fab mx-2 fa-spotify'   > </i>
             </li>
-              {props.userData?<> <li className="nav-item">
-                <Link  onClick={props.logOut} className="nav-link" to="login"> Logout</Link>
-              </li></>:<>    
-              <li className="nav-item">
-                <Link className="nav-link" to="login">Login</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="register"> Register</Link>
-              </li></>}
             </ul>
           </div>
         </div>
